@@ -14,66 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    /* Evitar parpadeo: ocultar sections por defecto y mostrar solo la invitación hasta que JS actue */
-    section { display: none; }
-    #invitation-card { display: flex; }
-
-    /* Estilos para el formulario de sugerir canción */
-    #sugerir-cancion { display:flex; align-items:center; justify-content:center; padding:2rem; min-height:calc(100vh - 4rem); }
-    .suggest-card { width:100%; max-width:820px; border-radius:40px; box-shadow:0 0 15px 0 #444; background:#fff; padding:4.5rem 2rem 2rem; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; min-height:60vh; }
-    .suggest-top-img { width:160px; height:auto; position:absolute; top:-90px; left:50%; transform:translateX(-50%); background:#fff; border-radius:50%; padding:0.6rem; box-shadow:0 6px 18px rgba(0,0,0,0.14); }
-    #sugerir-cancion .back-btn { position:relative; align-self:center; margin-bottom:1rem; }
-    .suggest-card h2 { margin-top:1.4rem; margin-bottom:0.75rem; text-align:center; }
-    .suggest-card form { width:100%; display:flex; flex-direction:column; gap:0.6rem; }
-    .suggest-card input[type="text"], .suggest-card input[type="url"], .suggest-card input[type="number"], .suggest-card textarea { width:100%; padding:0.6rem 0.8rem; border-radius:8px; border:1px solid #e6e6e6; }
-    @media (max-width:600px){ .suggest-top-img{ width:120px; top:-70px } .suggest-card{ padding:2.2rem 1rem 1.2rem } }
-        /* Carrusel de imágenes */
-    #carousel-section .carousel-wrapper { position:relative; width:100%; max-width:1100px; height:38vh; max-height:520px; overflow:hidden; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,0.12); }
-    #carousel-section .slides { position:relative; width:100%; height:100%; }
-    #carousel-section .slide { position:absolute; inset:0; opacity:0; transition:opacity 0.6s ease; display:flex; align-items:center; justify-content:center; }
-    #carousel-section .slide.active { opacity:1; z-index:2; }
-    #carousel-section .slide img { width:100%; height:100%; object-fit:cover; display:block; }
-    #carousel-section .carousel-dots { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:3; }
-    #carousel-section .carousel-dot { width:11px; height:11px; border-radius:50%; background:rgba(255,255,255,0.65); border:none; padding:0; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,0.15); }
-    #carousel-section .carousel-dot.active { background:#b48a78; }
-    @media (max-width:600px) { #carousel-section .carousel-wrapper { height:28vh; } }
-    /* Título del carrusel: asegurar visibilidad sobre las imágenes */
-    #carousel-section .title {
-      position: relative;
-      z-index: 999;
-      color: #ffffff;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.1rem, 2.2vw, 1.8rem);
-      text-align: center;
-      margin: 0 0 1rem 0;
-      padding: 0.2rem 0.6rem;
-    }
-
-    /* Sección imagenesBoda: full width gallery */
-    .imagenesBoda { width:100%; display:flex; align-items:center; justify-content:center; background:#000; padding:2rem 0; box-sizing:border-box; }
-    .imagenesBoda .gallery { position:relative; width:100%; max-width:1200px; aspect-ratio: 16/7; overflow:hidden; border-radius:12px; }
-    .imagenesBoda .divisor-wrap { width:100%; display:flex; justify-content:center; margin-bottom:-8px; position:relative; z-index:5; pointer-events:none; }
-    .imagenesBoda .divisor-imagenes { width:100%; max-width:1200px; height:auto; display:block; }
-    .imagenesBoda .divisor-imagenes.inverted { transform: scaleY(-1); margin-top:-8px; }
-    .imagenesBoda .gallery { margin:0; position:relative; z-index:1; }
-    @media (max-width:700px) {
-       .imagenesBoda .divisor-wrap {
-         margin-bottom:-17px 
-        } 
-    .imagenesBoda .divisor-imagenes.inverted {
-       margin-top:-16px 
-      } 
-  }
-    .imagenesBoda .slides { position:relative; width:100%; height:100%; }
-    .imagenesBoda .slides img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .5s ease; }
-    .imagenesBoda .slides img.active { opacity:1; z-index:2; }
-    .imagenesBoda .arrow { position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%; background:rgba(0,0,0,0.45); color:#fff; border:none; display:flex; align-items:center; justify-content:center; font-size:28px; cursor:pointer; z-index:4; }
-    .imagenesBoda .arrow.left { left:12px; }
-    .imagenesBoda .arrow.right { right:12px; }
-    @media (max-width:700px) { .imagenesBoda .gallery { aspect-ratio: 3/4; } .imagenesBoda .arrow{ width:1.2em;height:3em;font-size:1.1em } }
-  </style>
 </head>
 <body>
 
@@ -182,9 +122,9 @@
       <div class="itinerario-item">
         <img src="/img/Itinerario2.png" alt="Itinerario 2" class="itinerario-frame">
       </div>
-      <div class="itinerario-item">
+      <!-- <div class="itinerario-item">
         <img src="/img/Itinerario3.png" alt="Itinerario 3" class="itinerario-frame-big">
-      </div>
+      </div> -->
       <div class="itinerario-item">
         <img src="/img/Itinerario4.png" alt="Itinerario 4" class="itinerario-frame-big">
       </div>
@@ -194,9 +134,9 @@
       <div class="itinerario-item">
         <img src="/img/Itinerario6.png" alt="Itinerario 6" class="itinerario-frame-big">
       </div>
-      <div class="itinerario-item">
+      <!-- <div class="itinerario-item">
         <img src="/img/Itinerario7.png" alt="Itinerario 7" class="itinerario-frame-big2">
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -273,17 +213,19 @@
 
     <!-- Sección: imagenesBoda (full-width slideshow) -->
     <section id="imagenesBoda" class="imagenesBoda full-screen" hidden style="width:100%;">
-      <div class="divisor-wrap">
+      <div class="divisor-wrap" style="margin-bottom: -4.4%;">
         <img src="/img/divisor-imagenes.png" alt="Divisor" class="divisor-imagenes">
       </div>
       <div class="gallery" role="region" aria-label="Imágenes de la boda">
         <button class="arrow left" aria-label="Anterior">‹</button>
         <div class="slides">
-          <div class="slide active"><img src="/img/DSC_0054.JPG" alt=""></div>
+          <div class="slide active"><img src="/img/IMG-20260524-WA0011.jpg" alt=""></div>
+          <div class="slide"><img src="/img/IMG-20260524-WA0013.jpg" alt=""></div>
+          <div class="slide"><img src="/img/IMG-20260524-WA0007.jpg" alt=""></div>
+          <div class="slide"><img src="/img/IMG-20260524-WA0009.jpg" alt=""></div>
+          <div class="slide"><img src="/img/DSC_0054.JPG" alt=""></div>
           <div class="slide"><img src="/img/DSC_1196.JPG" alt=""></div>
           <div class="slide"><img src="/img/DSC_1333.JPG" alt=""></div>
-          <div class="slide"><img src="/img/DSC_0137.JPG" alt=""></div>
-          <div class="slide"><img src="/img/DSC_1128.JPG" alt=""></div>
         </div>
         <button class="arrow right" aria-label="Siguiente">›</button>
       </div>
@@ -353,7 +295,7 @@
         <details>
           <summary>1. Lugar de salida y vuelta de buses</summary>
           <div class="faq-content">
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">Ejemplo: Los autobuses saldrán desde el aparcamiento del Centro Comercial a las 16:00 y regresarán al mismo punto tras la cena (aprox. 01:30). Por favor, confirmad plaza en el formulario.</p>
+            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">Estamos trabajando en poder habilitar un autobús para el transporte al banquete. Os agradeceríamos que nos informarais en el cuestionario si los utilizaríais y os informaremos en cuanto tengamos más detalles.</p>
           </div>
         </details>
 
