@@ -333,7 +333,7 @@ function puzzleSolved() {
         }
         document.body.classList.remove('no-scroll');
         const idsToShowLocal = [
-          'nos-casamos','wedding-info','confirmacion-asistencia','itinerario','salon-celebraciones','countdown-section','celebracion','spotify','imagenesBoda'
+          'nos-casamos','wedding-info','confirmacion-asistencia','itinerario','salon-celebraciones','countdown-section','celebracion','fiesta','imagenesBoda'
         ];
         const ordered = Array.from(new Set([...(idsToShowLocal || []), ...(FALLBACK_IDS || [])]));
         ordered.forEach(id => {
@@ -624,7 +624,7 @@ function showMainSections() {
     'salon-celebraciones',
     'countdown-section',
     'celebracion',
-    'spotify',
+    'fiesta',
     'imagenesBoda'
   ];
   IDS_TO_SHOW.forEach(id => {

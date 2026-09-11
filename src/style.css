@@ -937,6 +937,10 @@ footer {
   outline-color: rgba(165,14,29,0.4);
 }
 
+.spotify-pill{
+  min-width: 12rem;
+}
+
 .wedding-card .names-image{
   /* ensure images inside the card are centered and visible on terracotta */
   margin: 0 auto;
@@ -1872,6 +1876,8 @@ img, iframe, .envelope-image, .corner-decor, .invitation-box img {
   height: auto;
   display: block;
   margin: 1rem auto -0.6rem;
+  transform-origin: center bottom;
+  animation: spotifyMusicBounce 3s ease-in-out infinite;
 }
 
 /* Center wrapper for the Spotify image in its section */
@@ -2319,6 +2325,20 @@ p {
   max-width: none;
   height: auto;
   transform: translateX(-50%);
+}
+
+@keyframes spotifyMusicBounce {
+  0%, 58%, 100% { transform: translateY(0) rotate(0); }
+  66% { transform: translateY(-9px) rotate(-1deg); }
+  74% { transform: translateY(0) rotate(1deg); }
+  82% { transform: translateY(-5px) rotate(-0.5deg); }
+  90% { transform: translateY(0) rotate(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fiesta-spoti {
+    animation: none;
+  }
 }
 
 /* Locator image and caption for map links */
