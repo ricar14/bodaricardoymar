@@ -21,7 +21,7 @@
   top: calc(100% + 1rem);
   white-space: nowrap;
   font-size: 0.95rem;
-  color: #CF521A;
+  color: #c17d23;
   pointer-events: none;
 }
 /* ============================
@@ -428,7 +428,7 @@ body.no-scroll, html.no-scroll {
 #reset-puzzle:active,
 #reset-puzzle:focus-visible {
   background-color: transparent !important;
-  color: #CF521A !important;
+  color: #c17d23 !important;
   box-shadow: none !important;
   filter: none !important;
 }
@@ -456,7 +456,8 @@ nav a {
 }
 
 section {
-  height: 70vh; /* reduced from 100vh to halve vertical space between sections */
+  min-height: 0;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -466,6 +467,7 @@ section {
   background: none !important;
   border: none !important;
   border-radius: 0 !important;
+  padding: 0;
 }
 
 /* Make the final photo section size to its content instead of full viewport */
@@ -519,7 +521,7 @@ section {
 
 /* Color específico para los párrafos dentro de la FAQ en #foto-final */
 #foto-final .faq .faq-content p {
-  color: #CF521A;
+  color: #c17d23;
 }
 
 
@@ -672,9 +674,6 @@ footer {
   section {
     /* On tablet-sized viewports keep reduced vertical footprint but allow
        content to expand if needed. */
-    min-height: 50vh;
-    height: auto;
-    width: 100vw;
     padding: 0;
     box-sizing: border-box;
   }
@@ -790,7 +789,7 @@ footer {
 #wedding-info {
   background: #f9f9f9;
   /* Reduce extra gap below wedding-info so next section aligns visually */
-  margin-bottom: 0.2rem;
+  margin-top: 4em;
 }
 
 #itinerario {
@@ -898,7 +897,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
-  margin-top: -1em;
+  margin-top: 0;
 }
 .map-wrap:hover{ transform: translateY(-3px); }
 
@@ -952,6 +951,66 @@ footer {
   margin: 0.5rem 0;
 }
 
+#wedding-info .magna-garden-info {
+  width: min(100%, 720px) !important;
+  padding: clamp(2.5rem, 7vw, 4.5rem) 1.5rem;
+  background: #fffdf9;
+  color: #c17d23;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#wedding-info .magna-garden-logo {
+  display: block;
+  width: min(100%, 265px);
+  height: auto;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+}
+
+#wedding-info .magna-garden-info p {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+#wedding-info .magna-garden-event {
+  font-size: clamp(1.55rem, 4.5vw, 2.35rem);
+  font-weight: 600;
+}
+
+#wedding-info .magna-garden-name {
+  margin-top: 1.4rem !important;
+  font-size: clamp(1.35rem, 3.7vw, 1.9rem);
+  font-weight: 600;
+}
+
+#wedding-info .magna-garden-address {
+  margin-top: 0.35rem !important;
+  font-size: clamp(1.05rem, 3.2vw, 1.4rem);
+}
+
+#wedding-info .magna-garden-map-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.8rem;
+  color: #c17d23;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#wedding-info .magna-garden-map-link img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+  object-fit: contain;
+}
+
 /* Form section */
 #form form {
   max-width: 400px;
@@ -972,7 +1031,7 @@ footer {
 }
 
 #form button {
-  background: #CF521A;
+  background: #c17d23;
   color: #fff;
   cursor: pointer;
 }
@@ -1088,8 +1147,11 @@ footer {
 body {
   font-family: 'Playfair Display', serif;
   color: #3a2c1a;
-  background-color: #FDFCF4 !important;
-  /* background-color: #dcd6ca !important; */
+  background-color: #FAF9F5 !important;
+}
+
+section {
+  background-color: #FAF9F5 !important;
 }
 
 h1, h2, h3 {
@@ -1627,7 +1689,17 @@ img, iframe, .envelope-image, .corner-decor, .invitation-box img {
 }
 
 #confirmacion-asistencia {
-  margin-bottom: 8em;
+  margin-top: -2rem;
+  margin-bottom: 0em;
+}
+
+#confirmacion-asistencia,
+#confirmacion-asistencia h2,
+#confirmacion-asistencia p,
+#confirmacion-asistencia .confirm-btn,
+#confirmacion-asistencia .confirm-caption {
+  color: #c17d23 !important;
+  font-family: 'Alex Brush', cursive !important;
 }
 
 #confirmacion-asistencia2 {
@@ -1919,14 +1991,12 @@ img, iframe, .envelope-image, .corner-decor, .invitation-box img {
   background: rgba(255,255,255,0.06) !important;
 }
 
-/* Icon inside the confirm button (love letter) forced to white */
+/* Icon inside the confirmation button */
 .confirm-locator{
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 3.5rem;
+  height: 3.5rem;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1);
-  -webkit-filter: brightness(0) invert(1);
   animation: lightbounce 2.5s ease-in-out infinite;
 }
 
@@ -1965,7 +2035,7 @@ img, iframe, .envelope-image, .corner-decor, .invitation-box img {
 }
 .itinerario-image{
   display: block;
-  width: 95%;
+  width: 100%;
   height: auto;
 }
 
@@ -2022,7 +2092,7 @@ img, iframe, .envelope-image, .corner-decor, .invitation-box img {
 
 #titulo-form-confirmacion {
   font-family: 'Playfair Display', serif !important;
-  color: #CF521A;
+  color: #c17d23;
 }
 
 .p-fiesta {
@@ -2149,6 +2219,14 @@ p {
   max-width: 92%;
   height: auto;
 }
+
+#confirmacion-asistencia .confirmacion-banner {
+  display: block;
+  width: 100vw;
+  max-width: none;
+  height: auto;
+}
+
 /* Locator image and caption for map links */
 @keyframes lightbounce {
   0% { transform: translateY(0); }
@@ -2161,8 +2239,6 @@ p {
   display: inline-block;
   object-fit: contain;
   animation: lightbounce 2.5s ease-in-out infinite;
-  filter: brightness(0) invert(1); /* force white appearance */
-  -webkit-filter: brightness(0) invert(1);
 }
 .map-caption{
   position: absolute;
@@ -2172,7 +2248,7 @@ p {
   width: 70vw; /* occupy 70% of viewport width as requested */
   max-width: 860px;
   font-size: 0.88rem;
-  color: #ffffff !important; /* force white */
+  color: #c17d23 !important;
   text-align: center;
   line-height: 1.05;
   pointer-events: auto;
@@ -2181,7 +2257,7 @@ p {
 .map-caption-red{
   position: absolute;
   font-size: 0.88rem;
-  color: #CF521A !important; /* force terracotta */
+  color: #c17d23 !important; /* force terracotta */
   text-align: center;
   pointer-events: auto;
 }
@@ -2194,7 +2270,7 @@ p {
 }
 
 .card-arco2 {
-  background-color: #CF521A; /* fallback color */
+  background-color: #c17d23; /* fallback color */
   background-image: url('/img/fondo-terracota.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -2218,7 +2294,7 @@ p {
   position: absolute;
   inset: 0.5em; /* distancia desde el borde de la caja */
   border-radius: inherit;
-  border: 1px solid #CF521A;
+  border: 1px solid #c17d23;
   pointer-events: none;
   box-sizing: border-box;
 }
@@ -2272,7 +2348,7 @@ img.inverted,
   transform-origin: 50% 50%;
 }
 .confirm-inner3 {
-  background-color: #CF521A;
+  background-color: transparent;
 }
 
 .itinerario-frame-big {
@@ -2289,13 +2365,13 @@ img.inverted,
 
 /* Form labels: ensure labels inside the RSVP form use the terracotta color */
 #form label {
-  color: #CF521A !important;
+  color: #c17d23 !important;
 }
 
 /* Also apply to labels inside the RSVP form container when using other selectors */
 #form .attendance label,
 #form .large-text + label {
-  color: #CF521A !important;
+  color: #c17d23 !important;
 }
 
 /* Align form to top and make title full-width */
@@ -2340,13 +2416,13 @@ img.inverted,
 #foto-final summary {
   list-style: none;
   cursor: pointer;
-  color: #CF521A;
+  color: #c17d23;
   font-weight: 600;
   font-size: 1.20rem;
   outline: none;
 }
 #foto-final summary::-webkit-details-marker { display: none; }
-#foto-final summary::before { content: "▸"; display: inline-block; width: 1.2em; transform: rotate(0deg); transition: transform 160ms ease; color: #CF521A; }
+#foto-final summary::before { content: "▸"; display: inline-block; width: 1.2em; transform: rotate(0deg); transition: transform 160ms ease; color: #c17d23; }
 #foto-final details[open] summary::before { transform: rotate(90deg); }
 #foto-final .faq-content { padding-top: 0.6rem; color: #5a4632; font-size: 1rem; line-height: 1.45; }
 
@@ -2416,7 +2492,7 @@ img.inverted,
 
 }
 
-  .imagenesBoda .divisor-wrap { margin-bottom: -4.4% !important; position: relative !important; z-index: 5 !important; }
+  .imagenesBoda .divisor-wrap { margin-bottom: -21.4% !important; position: relative !important; z-index: 5 !important; }
   .imagenesBoda .divisor-imagenes.inverted { margin-top: -4.4% !important; z-index: 6 !important; display:block !important; }
   .imagenesBoda .gallery { z-index: 1 !important; position: relative !important; }
 
@@ -2435,7 +2511,7 @@ img.inverted,
     @media (max-width:600px){ .suggest-top-img{ width:120px; top:-70px } .suggest-card{ padding:2.2rem 1rem 1.2rem } }
 
     /* Sección imagenesBoda: full width gallery */
-    .imagenesBoda { width:100%; display:flex; align-items:center; justify-content:center; background:#000; padding:2rem 0; box-sizing:border-box; }
+    .imagenesBoda { width:100%; display:flex; align-items:center; justify-content:center; background:#000; padding:2rem 0 0; margin-bottom:0; box-sizing:border-box; }
     .imagenesBoda .gallery { position:relative; width:100%; max-width:1200px; aspect-ratio: 16/7; overflow:hidden; border-radius:12px; }
     .imagenesBoda .divisor-wrap { width:100%; display:flex; justify-content:center; margin-bottom:-8px; position:relative; z-index:5; pointer-events:none; }
     .imagenesBoda .divisor-imagenes { width:100%; max-width:1200px; height:auto; display:block; }
@@ -2448,3 +2524,14 @@ img.inverted,
     .imagenesBoda .arrow.left { left:12px; }
     .imagenesBoda .arrow.right { right:12px; }
     @media (max-width:700px) { .imagenesBoda .gallery { aspect-ratio: 3/4; } .imagenesBoda .arrow{ width:1.2em;height:3em;font-size:1.1em } }
+
+
+    #h3-te-esperamos {
+       color: #c17d23 !important;
+       font-family: 'Alex Brush';
+       text-align: center;
+       margin-top: 2em; 
+       margin-bottom: -0.8em;
+       text-align: center;
+       font-weight: 520;
+    }

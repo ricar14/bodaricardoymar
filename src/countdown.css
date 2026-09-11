@@ -37,10 +37,6 @@
   align-items: center;
   justify-content: center;
   padding: 3.2rem 1.2rem;
-  background-image: url('/img/contador3.png') !important;
-  background-repeat: no-repeat !important;
-  /* Make the visible background image appear 90% of its original size */
-  background-size: 90% auto !important;
   background-position: center center !important;
   /* Scale the whole section visually to 90% (keeps layout centered) */
   transform: scale(0.9);
@@ -114,7 +110,7 @@
 }
 
 .count-title{
-  font-family: 'Allura', cursive !important;
+  font-family: Alex Brush;
   font-weight: 400;
   color: var(--accent);
   margin: 0;
@@ -305,7 +301,7 @@
 /* Colores personalizados para contadores (sobrescriben reglas previas) */
 #countdown-section .count-number,
 #countdown-section .count-label {
-  color: #c15123 !important;
+  color: #c17d23 !important;
 }
 
 /* Alternativa para juntar aún más items + ':'
@@ -321,6 +317,60 @@
 #countdown-section .count-item:not(:last-child)::after{
   left: 2.5em !important;
   transform: translate(0, -50%) !important;
+}
+
+/* Diseño actual de la cuenta atrás */
+#countdown-section {
+  min-height: 0;
+  margin: 0;
+  padding: 2.5rem 1rem;
+  transform: none;
+}
+
+#countdown-section .count-inner {
+  max-width: 760px;
+  overflow: visible;
+}
+
+#countdown-section .count-title {
+  margin-bottom: 1.25rem;
+  color: #c17d23;
+  font-family: 'Alex Brush';
+  font-size: clamp(2rem, 7vw, 4.2rem);
+  line-height: 1;
+  font-weight: bold;
+}
+
+#countdown-section .count-grid {
+  gap: clamp(0.65rem, 3vw, 2rem);
+  overflow: visible;
+  padding: 0;
+}
+
+#countdown-section .count-item {
+  flex: 1 1 0;
+  min-width: 0;
+  margin-right: 0 !important;
+}
+
+#countdown-section .count-item:not(:last-child)::after {
+  display: none;
+}
+
+#countdown-section .count-number {
+  min-width: 0;
+  width: 100%;
+  height: 1.2em;
+  font-size: clamp(2rem, 8vw, 4.2rem);
+  font-weight: 700;
+}
+
+#countdown-section .count-label {
+  margin-top: 0.35rem;
+  font-family: 'Alex Brush';
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+  font-weight: 500;
+  text-transform: none;
 }
 
 /* ============================

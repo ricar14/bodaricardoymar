@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boda Elena y Dani</title>
-  <link rel="icon" href="/img/logo.png">
+  <title>Boda Ricardo y Mar</title>
   <link rel="stylesheet" href="./src/style.css">
   <link rel="stylesheet" href="./src/countdown.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,61 +18,34 @@
 
   <script type="module" src="./src/countdown.ts"></script>
 
-  <!-- Fondo del sobre, colocado dentro de la tarjeta más abajo (ver .invitation-box) -->
-
-  <section id="invitation-card">
-    <div id="envelope-anim" style="display:flex;position:relative;">
-      <img id="sobrePoster" src="/img/sobre.png" alt="Sobre" style="position:absolute;left:0;top:0;width:100%;object-fit:cover;pointer-events:none;z-index:10001;transition:opacity 360ms ease;transform: scale(1.5);" />
-      <video id="sobreAnimado" src="/img/invitacion_abriendose.mp4" class="envelope-image" muted preload="metadata" playsinline webkit-playsinline poster="/img/sobre.png" style="position:relative;z-index:10000;"></video>
-    </div>
-  </section>
-
-  <!-- Puzzle gate: aparece tras revelar la invitación -->
-  <section id="puzzle-gate" hidden class="full-screen hidden" style="display:none;align-items:center;justify-content:center;width:100%;">
-    <div style="text-align:center;">
-      <h2 style="font-family: wfont_25822f_742283984906494d857b784be3c912ce, wf_742283984906494d857b784be, orig_geographica_script_w_01_regular, 'Great Vibes'; color:#CF521A; margin-bottom:0.5rem;">Completa el puzzle de <br>nuestra historia</h2>
-      <p style="color:#CF521A; margin-top:-1em; margin-bottom:1rem;font-family:'Playfair Display', serif !important;font-size: 1.2em;">Arrastra las piezas no marcadas en rojo<br> para recomponer la imagen.</p>
-      <div id="puzzle-board"></div>
-      <div style="margin-top:0.9rem;">
-        <button id="reset-puzzle" class="btn btn-outline-secondary" style="border-radius: 0.8rem;font-size: 1.5em;padding: 0.2rem 0.7rem;color: #CF521A;border-color: #CF521A;">Pista</button>
-      </div>
-    </div>
-  </section>
-
   <section id="nos-casamos" hidden class="full-screen">
-    <div class="top-hero">
-      <img src="/img/IMG-20260503-WA0010.jpg" alt="Portada atardecer" class="top-sunset">
-      <img src="/img/curva_portada_horizontal.png" alt="Curva portada" class="top-curve" id="top-curve">
-    </div>
-    <div class="names-block">
-      <div class="names-image-wrap" style="width:100%;height:auto;">
-        <div class="names-overlay">¡Comienza el juego!</div>
-        <img src="/img/nombres_personaliz.png" alt="Elena y Dani" class="names-image" style="width:100%;height:auto;">
-      </div>
-    </div>
-</section>
+    <img src="/img/RyM.png" alt="Ricardo y Mar" style="width:100%;height:auto;display:block;">
+  </section>
 
-  <section id="countdown-section" hidden class="full-screen" style="width:100%;height:50%;background-image: url(&quot;/img/contador3.png&quot;);background-repeat: no-repeat;background-size: cover;background-position: center center;display: flex;">
-    <div class="count-inner"  style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;left: 1.5em;top: 2em;">
-      <div class="count-grid" style="display:flex;align-items:center;margin-top:3.5rem;">
-        <div class="count-item" style="text-align:center;min-width:50px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.5);">
-          <div class="count-number" id="days" style="font-size:1.5rem;font-weight:700;"><span>0</span></div>
-          <div class="count-label" style="font-size:0.85rem;">DÍAS</div>
+  <section id="countdown-section" hidden class="full-screen" style="margin-top: 1em;">
+    <div class="count-inner">
+      <h2 class="count-title">FALTAN:</h2>
+      <div class="count-grid" aria-label="Cuenta atrás para la boda">
+        <div class="count-item">
+          <div class="count-number" id="days"><span>0</span></div>
+          <div class="count-label">Días</div>
         </div>
-        <div class="count-item" style="text-align:center;min-width:50px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.5);">
-          <div class="count-number" id="hours" style="font-size:1.5rem;font-weight:700;"><span>00</span></div>
-          <div class="count-label" style="font-size:0.85rem;">HS</div>
+        <div class="count-item">
+          <div class="count-number" id="hours"><span>00</span></div>
+          <div class="count-label">Horas</div>
         </div>
-        <div class="count-item" style="text-align:center;min-width:50px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.5);">
-          <div class="count-number" id="minutes" style="font-size:1.5rem;font-weight:700;"><span>00</span></div>
-          <div class="count-label" style="font-size:0.85rem;">MIN</div>
+        <div class="count-item">
+          <div class="count-number" id="minutes"><span>00</span></div>
+          <div class="count-label">Minutos</div>
         </div>
-        <div class="count-item" style="text-align:center;min-width:50px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.5);">
-          <div class="count-number" id="seconds" style="font-size:1.5rem;font-weight:700;"><span>00</span></div>
-          <div class="count-label" style="font-size:0.85rem;">SEG</div>
+        <div class="count-item">
+          <div class="count-number" id="seconds"><span>00</span></div>
+          <div class="count-label">Segundos</div>
         </div>
       </div>
     </div>
+    <h3 id="h3-te-esperamos">Te esperamos para<br> celebrar nuestra boda</h3>
+    <img src="/img/fecha_rm2.png" alt="Fecha" style="width:82%;height:auto;display:block;margin-top: 3em;">
   </section>
 
   
@@ -82,90 +54,64 @@
   </section>
 
   <section id="wedding-info" hidden class="confirm-section full-screen" style="width:100%;">
-    <div class="confirm-content card-arco3" style="width:100%;transform: translateY(8%)">
-      <img src="/img/divisor.png" alt="Divisor" class="not-inverted">
-    </div>
     <div class="confirm-inner3" style="width:100%;">
-      <img src="/img/pareja-fechas-mod-int2.png" alt="Acompañanos" class="names-image" style="height:auto;margin-top:1%;margin-bottom:2%;width:100%;">
+      <img src="/img/logo_magna.png" alt="Acompañanos" class="names-image" style="height:auto;margin-top:1%;margin-bottom:2%;width:63%;">
+        <h5 style="color: #c17d23; font-family: 'Alex Brush'; font-weight: bold;">Ceremonia Civil y Celebración</h5>
+        <h5 style="color: #c17d23; font-family: 'Alex Brush';">Av. de Cabezo de Torres, 11<br> Zarandona, Murcia</h5>
 
       <div class="map-wrap" style="margin-bottom: 4em;margin-top: 1em;">
-        <a href="https://maps.app.goo.gl/Xhffhaaz1wjXCUYC8" target="_blank" class="map-circle-btn" rel="noopener noreferrer" aria-label="Ver ubicación (Iglesia)">
-          <img src="/img/localtion-map-white.png" alt="Ver ubicación Iglesia" class="map-locator">
-          <span class="visually-hidden">Iglesia</span>
+        <a href="https://maps.app.goo.gl/B4x2jYa8BDMupu277" target="_blank" class="map-circle-btn" rel="noopener noreferrer" aria-label="Ver ubicación">
+          <img src="/img/anillos_maps.png" alt="Ver ubicación" class="map-locator">
+          <span class="visually-hidden">Ceremonio y Celebración</span>
           <div class="map-caption">(Pulsa para ver en Maps)</div>
         </a>
       </div>
-
-      <img src="/img/finca.png" style="margin-top:4em;" class="salon-logo" alt="Finca El Jardín">
-
-      <div class="map-wrap" style="margin-bottom: 4em;">
-        <div class="map-caption" style="transform: translate(-11em, -14em);font-size:0.8rem;">Y posteriormente celebra con nosotros en</div>
-        <a href="https://www.google.com/maps/place/Finca+El+Jard%C3%ADn/@37.7434613,-1.2013204,12z/data=!4m10!1m2!2m1!1sfinca+el+jardin+san+pedro+del+pinatar!3m6!1s0xd636f467b910703:0xfa0267076ecdd67d!8m2!3d37.7434613!4d-1.0571248!15sCiVmaW5jYSBlbCBqYXJkaW4gc2FuIHBlZHJvIGRlbCBwaW5hdGFyWiciJWZpbmNhIGVsIGphcmRpbiBzYW4gcGVkcm8gZGVsIHBpbmF0YXKSAQ13ZWRkaW5nX3ZlbnVlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU40TFdWVVFXeDNSUkFC4AEA-gEFCIQDEDE!16s%2Fg%2F11h9gdbtlj?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-circle-btn" rel="noopener noreferrer" aria-label="Ver ubicación (Finca El Jardín)">
-          <img src="/img/map-locator.png"  alt="Ver ubicación Finca El Jardín" class="map-locator">
-          <span class="visually-hidden">Finca El Jardín</span>
-          <div class="map-caption">(Pulsa para ver en Maps)</div>
-        </a>
-      </div>
-    </div>
-
-    <div class="confirm-content card-arco3" style="width:100%; transform: translate(0%, -9%);">
-      <img src="/img/divisor.png" alt="Divisor" class="inverted" >
-    </div>
   </section>
 
-  <section id="itinerario" hidden class="full-screen" style="width:100%;">
-    <h2 class="section-title" style="font-family: wfont_25822f_742283984906494d857b784be3c912ce, wf_742283984906494d857b784be, orig_geographica_script_w_01_regular, 'Great Vibes', cursive;text-align:center;margin-top:1rem;margin-bottom:1.25rem;font-family:'Playfair Display', serif;color:#CF521A;font-size:3.6rem">Itinerario</h2>
-    <div class="itinerario-list">
-      <div class="itinerario-item">
-        <img src="/img/Itinerario1.png" alt="Itinerario 1" class="itinerario-frame">
-      </div>
-      <div class="itinerario-item">
-        <img src="/img/Itinerario2.png" alt="Itinerario 2" class="itinerario-frame">
-      </div>
-      <div class="itinerario-item">
-        <img src="/img/Itinerario3.png" alt="Itinerario 3" class="itinerario-frame-big">
-      </div>
-      <div class="itinerario-item">
-        <img src="/img/Itinerario4.png" alt="Itinerario 4" class="itinerario-frame-big">
-      </div>
-      <div class="itinerario-item">
-        <img src="/img/Itinerario5.png" alt="Itinerario 5" class="itinerario-frame-big">
-      </div>
-      <div class="itinerario-item">
-        <img src="/img/Itinerario6.png" alt="Itinerario 6" class="itinerario-frame-big">
-      </div>
-      <div class="itinerario-item">
-        <img src="/img/itinerariovueltabus.png" alt="Itinerario 7" class="itinerario-frame-big2">
-      </div>
-    </div>
-  </section>
-
-  
-  <section id="confirmacion-asistencia" hidden class="confirm-section3 full-screen" style="width:100%;">
-    <div class="confirm-content card-arco3" style="width:108%;transform: translateY(8%)">
-      <img src="/img/divisor.png" alt="Divisor" class="not-inverted">
-    </div>
+  <section id="confirmacion-asistencia" hidden class="confirm-section3" style="width:100%;">
     <div class="confirm-inner3" style="width:108%;">
-        <h2>¡Inscripciones para
-          <br>el juego!</h2>
-
-        <p style="margin-bottom: 0rem;font-family: 'Playfair Display', serif !important;">¿Nos acompañas?</p>
-
-        <a href="https://forms.gle/b8dUtd2eACqCHoUj8" target="_blank" rel="noopener noreferrer" style="font-family: 'Playfair Display', serif !important;" class="confirm-btn" aria-label="Ir al formulario de confirmación">
-          <img src="/img/love-letter.png" alt="Sobre de invitación" class="confirm-locator">
+        <h2>Confirmación</h2>
+      <p style="margin-bottom: 0rem;">Por favor, confirma tu asistencia a la boda.</p>
+      <a href="https://forms.gle/b8dUtd2eACqCHoUj8" target="_blank" rel="noopener noreferrer" class="confirm-btn" aria-label="Ir al formulario de confirmación">
+          <img src="/img/sobre.png" alt="Sobre de invitación" class="confirm-locator">
           <span class="visually-hidden">Confirmación</span>
           <div class="confirm-caption">(Pulsa en el sobre)</div>
         </a>
         
-      <div class="confirm-content card-arco3" style="width:100%; transform: translate(0%, 75%);">
-        <img src="/img/divisor.png" alt="Divisor" class="inverted" >
+    </div>
+  </section>
+
+  <section id="rm-lago" hidden class="full-screen" style="width:100%;">
+    <img src="/img/rm_lago.png" alt="Imagen" class="itinerario-image" style="height:auto;margin-top:1.2rem;">
+  </section>
+
+  <section id="itinerario" hidden class="full-screen" style="width:100%;margin-top: 2em;">
+    <h2 class="section-title" style="font-family: wfont_25822f_742283984906494d857b784be3c912ce, wf_742283984906494d857b784be, orig_geographica_script_w_01_regular, 'Great Vibes', cursive;text-align:center;margin-top:1rem;margin-bottom:1.25rem;font-family:'Playfair Display', serif;color:#c17d23;font-size:3.6rem">Itinerario</h2>
+    <div class="itinerario-list">
+      <div class="itinerario-item">
+        <img src="/img/itinerario_mr/1.png" alt="Itinerario 1" class="itinerario-frame">
+      </div>
+      <div class="itinerario-item">
+        <img src="/img/itinerario_mr/2.png" alt="Itinerario 2" class="itinerario-frame">
+      </div>
+      <div class="itinerario-item">
+        <img src="/img/itinerario_mr/3.png" alt="Itinerario 3" class="itinerario-frame-big">
+      </div>
+      <div class="itinerario-item">
+        <img src="/img/itinerario_mr/4.png" alt="Itinerario 4" class="itinerario-frame-big">
+      </div>
+      <div class="itinerario-item">
+        <img src="/img/itinerario_mr/5.png" alt="Itinerario 5" class="itinerario-frame-big">
+      </div>
+      <div class="itinerario-item">
+        <img src="/img/itinerario_mr/6.png" alt="Itinerario 6" class="itinerario-frame-big">
       </div>
     </div>
   </section>
 
     <section id="fiesta" hidden class="full-screen" style="width:100%;">
-      <h3 class="id-musica" style="color: #CF521A;">Sube tus fotos</h3>
-      <p class="p-fiesta" style="color: #CF521A;margin-bottom: 0rem;">
+      <h3 class="id-musica" style="color: #c17d23;">Sube tus fotos</h3>
+      <p class="p-fiesta" style="color: #c17d23;margin-bottom: 0rem;">
             Puedes compartir con nosotros las fotos de la boda en la carpeta compartida.
       </p>
 
@@ -176,9 +122,9 @@
         </a>
       </div>
 
-      <h3 class="id-musica" style="color: #CF521A;margin-top:4rem;">Playlist</h3>
+      <h3 class="id-musica" style="color: #c17d23;margin-top:4rem;">Playlist</h3>
 
-      <p class="p-fiesta" style="color: #CF521A;">
+      <p class="p-fiesta" style="color: #c17d23;">
            Si tienes una canción especial que te gustaría escuchar,
            <br>¡Compártela con nosotros!     
       </p>
@@ -214,23 +160,19 @@
     <!-- Sección: imagenesBoda (full-width slideshow) -->
     <section id="imagenesBoda" class="imagenesBoda full-screen" hidden style="width:100%;">
       <div class="divisor-wrap" style="margin-bottom: -4.4%;">
-        <img src="/img/divisor-imagenes.png" alt="Divisor" class="divisor-imagenes">
+        <img src="/img/rotura_papel4.png" alt="Divisor" class="divisor-imagenes">
       </div>
       <div class="gallery" role="region" aria-label="Imágenes de la boda">
         <button class="arrow left" aria-label="Anterior">‹</button>
         <div class="slides">
-          <div class="slide active"><img src="/img/IMG-20260524-WA0011.jpg" alt=""></div>
-          <div class="slide"><img src="/img/IMG-20260524-WA0013.jpg" alt=""></div>
-          <div class="slide"><img src="/img/IMG-20260524-WA0007.jpg" alt=""></div>
-          <div class="slide"><img src="/img/IMG-20260524-WA0009.jpg" alt=""></div>
-          <div class="slide"><img src="/img/DSC_0054.JPG" alt=""></div>
-          <div class="slide"><img src="/img/DSC_1196.JPG" alt=""></div>
-          <div class="slide"><img src="/img/DSC_1333.JPG" alt=""></div>
+          <div class="slide active"><img src="/img/DSC_1367.JPG" alt=""></div>
+          <div class="slide"><img src="/img/DSC_0261.JPG" alt=""></div>
+          <div class="slide"><img src="/img/DSC_1445.JPG" alt=""></div>
+          <div class="slide"><img src="/img/IMG-20260726-WA0140.jpg" alt=""></div>
+          <div class="slide"><img src="/img/IMG-20260726-WA0270.jpg" alt=""></div>
+          <div class="slide"><img src="/img/DSC_1467.JPG" alt=""></div>
         </div>
         <button class="arrow right" aria-label="Siguiente">›</button>
-      </div>
-      <div class="divisor-wrap">
-        <img src="/img/divisor-imagenes.png" alt="Divisor invertido" class="divisor-imagenes inverted">
       </div>
     </section>
 
@@ -295,7 +237,7 @@
         <details>
           <summary>1. Lugar de salida y vuelta de buses</summary>
           <div class="faq-content">
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">
+            <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">
               El autobús de cortesía saldrá puntualmente a las 13:30 desde la explanada de Lo Pagán, facilitando el traslado de los invitados hasta la Finca El Jardín para la celebración. Al finalizar la fiesta, el regreso está previsto a las 02:15 desde la finca al mismo punto de partida. Rogamos puntualidad para garantizar el buen desarrollo del evento.
             </p>
           </div>
@@ -304,10 +246,10 @@
         <details>
           <summary>2. Número de cuenta</summary>
           <div class="faq-content">
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">
+            <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">
               Si os apetece tener un detalle con nosotros por nuestra boda, podéis hacerlo mediante transferencia a este número de cuenta:
             </p>
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 1.05em;font-weight: 600;letter-spacing: 0.02em;user-select: all;-webkit-user-select: all;word-break: break-word;overflow-wrap: anywhere;">
+            <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 1.05em;font-weight: 600;letter-spacing: 0.02em;user-select: all;-webkit-user-select: all;word-break: break-word;overflow-wrap: anywhere;">
               ES08 0182 5319 7102 0877 8123
             </p>
           </div>
@@ -316,22 +258,22 @@
         <details>
           <summary>3. Código de vestimenta</summary>
           <div class="faq-content">
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">Recomendamos traje de cóctel o vestido elegante. Evitad ropa deportiva. Si tenéis dudas consultad con la organización.</p>
+            <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">Recomendamos traje de cóctel o vestido elegante. Evitad ropa deportiva. Si tenéis dudas consultad con la organización.</p>
           </div>
         </details>
 
         <details>
           <summary>4. Horario ceremonia</summary>
           <div class="faq-content">
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">La ceremónia empieza a las 12:00, pero rogamos que los invitados lleguen con al menos 30 minutos de antelación para asegurar un inicio puntual.</p>
+            <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">La ceremónia empieza a las 12:00, pero rogamos que los invitados lleguen con al menos 30 minutos de antelación para asegurar un inicio puntual.</p>
           </div>
         </details>
 
         <details>
           <summary>5. Invitados</summary>
           <div class="faq-content">
-            <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;"></p>
-          <p style="color:#CF521A;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">
+            <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 0.95em;"></p>
+          <p style="color:#c17d23;font-family: 'Playfair Display', serif !important;font-size: 0.95em;">
             Nos gustaría que, en la medida de lo posible, la celebración sea solo para adultos. Entendemos que en ocasiones puede ser complicado, pero agradecemos vuestra comprensión para que todos podamos disfrutar al máximo de este día especial.
           </p>
         </details>

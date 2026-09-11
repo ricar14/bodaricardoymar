@@ -264,14 +264,11 @@ initPuzzleIfNeeded();
 // Global arrays used to decide which sections to show after invitation/puzzle
 const FALLBACK_IDS = [
   'nos-casamos',
-  // 'carousel-section',
-  'nuestra-historia',
   'wedding-info',
+  'confirmacion-asistencia',
   'salon-celebraciones',
   'celebracion',
   'fiesta',
-  'foto-final',
-  'confirmacion-asistencia',
   'itinerario',
   'spotify',
   'imagenesBoda'
@@ -282,25 +279,8 @@ const sobreAnimadoEl = document.getElementById("sobreAnimado") as HTMLElement | 
 // Element reference for the puzzle gate (used when revealing the invitation)
 const puzzleGateEl = document.getElementById("puzzle-gate");
 
-// Mostrar sólo la invitación al cargar; ocultar el resto
-const sections = document.querySelectorAll('section');
-sections.forEach(sec => {
-  sec.style.display = 'none';
-});
-// Mostrar invitation-card solo si existe
-if (invitationCard) {
-  invitationCard.style.display = 'flex';
-  // lock page scroll while invitation overlay is visible
-  document.body.classList.add('no-scroll');
-} else {
-  // si no hay invitation-card, mostrar las principales secciones por seguridad
-  const fallbackIds = ['nos-casamos' , 'nuestra-historia', 'wedding-info', 'salon-celebraciones', 'celebracion', 'fiesta', 'form', 'foto-final', 'confirmacion-asistencia'];
-  fallbackIds.push('itinerario','spotify'); // Include 'itinerario' in fallbackIds
-  fallbackIds.forEach(id => {
-    const s = document.getElementById(id);
-    if (s) { s.removeAttribute('hidden'); s.style.display = 'flex'; }
-  });
-}
+// Sin accesos iniciales, las secciones principales se muestran directamente.
+showMainSections();
 
 
 function puzzleSolved() {
@@ -353,7 +333,7 @@ function puzzleSolved() {
         }
         document.body.classList.remove('no-scroll');
         const idsToShowLocal = [
-          'nos-casamos','nuestra-historia','wedding-info','itinerario','salon-celebraciones','countdown-section','celebracion','confirmacion-asistencia','fiesta','spotify','imagenesBoda','foto-final'
+          'nos-casamos','wedding-info','confirmacion-asistencia','itinerario','salon-celebraciones','countdown-section','celebracion','spotify','imagenesBoda'
         ];
         const ordered = Array.from(new Set([...(idsToShowLocal || []), ...(FALLBACK_IDS || [])]));
         ordered.forEach(id => {
@@ -637,18 +617,15 @@ if (backFromInvitadosBtn) {
 function showMainSections() {
   const IDS_TO_SHOW = [
     'nos-casamos',
-    // 'carousel-section',
-    'nuestra-historia',
     'wedding-info',
+    'confirmacion-asistencia',
+    'rm-lago',
     'itinerario',
     'salon-celebraciones',
     'countdown-section',
     'celebracion',
-    'confirmacion-asistencia',
-    'fiesta',
     'spotify',
-    'imagenesBoda',
-    'foto-final'
+    'imagenesBoda'
   ];
   IDS_TO_SHOW.forEach(id => {
     const sec = document.getElementById(id);
@@ -777,7 +754,7 @@ function ensureMusicControl() {
       const style = document.createElement('style');
       style.id = styleId;
       style.textContent = `
-        #music-toggle { position: fixed; right: 3%; bottom: 2%; width:2.3rem; height:2.3rem; border-radius:50%; background:#CF521A; color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,0.18); z-index:9999; cursor:pointer; border:none; }
+        #music-toggle { position: fixed; right: 3%; bottom: 2%; width:2.3rem; height:2.3rem; border-radius:50%; background:#c17d23; color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,0.18); z-index:9999; cursor:pointer; border:none; }
         #music-toggle:active { transform: scale(0.96); }
         #music-toggle i { font-size:1.2rem; }
       `;

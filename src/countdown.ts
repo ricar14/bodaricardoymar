@@ -1,6 +1,6 @@
 // Countdown TypeScript module (vanilla, sin dependencias)
 // Fecha objetivo (configurable): usa formato ISO o Date(...)
-export const TARGET_DATE = new Date('2026-10-31T12:00:00');
+export const TARGET_DATE = new Date('2027-02-06T13:00:00');
 
 const daysEl = document.getElementById('days') as HTMLElement | null;
 const hoursEl = document.getElementById('hours') as HTMLElement | null;
