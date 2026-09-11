@@ -301,7 +301,7 @@
 /* Colores personalizados para contadores (sobrescriben reglas previas) */
 #countdown-section .count-number,
 #countdown-section .count-label {
-  color: #c17d23 !important;
+  color: #A50E1D !important;
 }
 
 /* Alternativa para juntar aún más items + ':'
@@ -334,7 +334,7 @@
 
 #countdown-section .count-title {
   margin-bottom: 1.25rem;
-  color: #c17d23;
+  color: #A50E1D;
   font-family: 'Alex Brush';
   font-size: clamp(2rem, 7vw, 4.2rem);
   line-height: 1;

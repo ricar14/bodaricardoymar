@@ -754,7 +754,7 @@ function ensureMusicControl() {
       const style = document.createElement('style');
       style.id = styleId;
       style.textContent = `
-        #music-toggle { position: fixed; right: 3%; bottom: 2%; width:2.3rem; height:2.3rem; border-radius:50%; background:#c17d23; color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,0.18); z-index:9999; cursor:pointer; border:none; }
+        #music-toggle { position: fixed; right: 3%; bottom: 2%; width:2.3rem; height:2.3rem; border-radius:50%; background:#A50E1D; color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,0.18); z-index:9999; cursor:pointer; border:none; }
         #music-toggle:active { transform: scale(0.96); }
         #music-toggle i { font-size:1.2rem; }
       `;
