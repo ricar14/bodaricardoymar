@@ -1743,12 +1743,12 @@ img, iframe, .envelope-image, .corner-decor, .invitation-box img {
 }
 
 #confirmacion-asistencia .count-title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.05rem;
   color: #A50E1D !important;
-  font-family: 'Alex Brush', cursive !important;
+  font-family: 'Alex Brush' !important;
   font-size: clamp(2rem, 7vw, 4.2rem);
   line-height: 1;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 #confirmacion-asistencia2 {
