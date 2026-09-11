@@ -2271,9 +2271,12 @@ p {
 
 #confirmacion-asistencia .confirmacion-banner {
   display: block;
+  position: relative;
+  left: 50%;
   width: 100vw;
   max-width: none;
   height: auto;
+  transform: translateX(-50%);
 }
 
 /* Locator image and caption for map links */
