@@ -265,11 +265,11 @@ initPuzzleIfNeeded();
 const FALLBACK_IDS = [
   'nos-casamos',
   'wedding-info',
-  'confirmacion-asistencia',
   'salon-celebraciones',
   'celebracion',
   'fiesta',
   'itinerario',
+  'confirmacion-asistencia',
   'spotify',
   'imagenesBoda'
 ];
@@ -618,9 +618,9 @@ function showMainSections() {
   const IDS_TO_SHOW = [
     'nos-casamos',
     'wedding-info',
-    'confirmacion-asistencia',
     'rm-lago',
     'itinerario',
+    'confirmacion-asistencia',
     'salon-celebraciones',
     'countdown-section',
     'celebracion',
