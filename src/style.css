@@ -1018,7 +1018,7 @@ footer {
   height: auto;
 }
 @media (max-width: 720px){
-  #wedding-info .names-image,
+  #wedding-info .names-image, 
   #wedding-info .salon-logo{ max-width: 100%; }
 }
 
